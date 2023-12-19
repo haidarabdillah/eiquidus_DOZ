@@ -34,7 +34,7 @@ nvm use 20
 npm i
 
 # MongoDB setup
-mongo <<EOF
+mongosh <<EOF
 use $DB_NAME
 db.createUser({
   user: "$DB_USER",
