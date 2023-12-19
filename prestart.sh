@@ -15,7 +15,7 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu $(lsb_release
 sudo apt update
 
 # Install MongoDB
-sudo apt install -y mongodb-org
+sudo apt-get install -y mongodb-org
 
 # Start MongoDB service
 sudo service mongod start
