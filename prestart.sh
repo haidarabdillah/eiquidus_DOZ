@@ -5,6 +5,15 @@ DB_NAME="explorerdb"
 DB_USER="userrpc"
 DB_PASS="changeMeplease"
 
+# Update package list
+sudo apt update
+
+# Install MongoDB
+sudo apt install -y mongodb
+
+# Start MongoDB service
+sudo service mongod start
+
 # Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
@@ -24,7 +33,7 @@ use $DB_NAME
 db.createUser({
   user: "$DB_USER",
   pwd: "$DB_PASS",
-  roles: ["readWrite", "dbAdmin"]
+  roles: ["readWrite"]
 });
 EOF
 
